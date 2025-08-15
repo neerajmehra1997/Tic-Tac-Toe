@@ -1,16 +1,17 @@
-package org.tic_tac_toe.impl;
+package org.tic_tac_toe.impl.winningImpl;
 
+import org.tic_tac_toe.Cell;
 import org.tic_tac_toe.WinningStrategy;
 import org.tic_tac_toe.enums.Symbol;
 
 public class RowWinningStrategy implements WinningStrategy {
 
     @Override
-    public boolean checkWinner(Symbol[][] board, Symbol symbol) {
+    public boolean checkWinner(Cell[][] board, Symbol symbol) {
         for (int row = 0; row < board.length; row++) {
             boolean win = true;
             for (int col = 0; col < board[row].length; col++) {
-                if (board[row][col] != symbol) {
+                if (board[row][col].getCellValue() != symbol) {
                     win = false;
                     break;
                 }

@@ -10,7 +10,7 @@ public interface WinningStrategy {
      * @param symbol The symbol of the current player (X or O).
      * @return true if the player has won, false otherwise.
      */
-    boolean checkWinner(Symbol[][] board, Symbol symbol);
+    boolean checkWinner(Cell[][] board, Symbol symbol);
 
     /**
      * Checks if the game is a draw.
